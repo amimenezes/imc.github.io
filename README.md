@@ -1,1 +1,1 @@
-# https://github.com/mml88/imc.github.io/
+# https://mml88.github.io/imc.github.io/index.html
