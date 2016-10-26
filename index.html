@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <meta charset="utf-8">
+  <head>
+  	<title>IMC</title>
+	  
+	  <!-- Inserindo ícone na tag "title" -->
+    <link rel="icon" type="image/png" href="img/icon-weight.png"/>
+	  
+	  <!-- Ícone para todos os modelos -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">  
+    <!-- Reveal.js slides stylesheet -->
+    <link rel="stylesheet" href="revealjs/css/reveal.css">
+    <link rel="stylesheet" href="revealjs/css/theme/white.css">
+  </head>
+  <body>
+  	<div class="reveal">
+  		<div class="slides">
+            
+            <section>
+                <img src="img/inicial.png"/>
+                <br>
+                <!--<p>Você pode inserir seus dados nas janelas <i>pop up</i> que estão abrindo.</p>-->
+  			</section>
+            
+  			<section>
+  				<h1>O que é o IMC?</h1>
+                <p> É uma medida do grau de obesidade de uma pessoa.</p>
+                <p> Através dele é possível saber se alguém está acima, abaixo ou com os parâmetros ideais de peso para sua estatura. </p>
+                <p> IMC significa: Índice de Massa Corporal.</p>
+  			</section>
+
+  			<section>
+  				<h2>Nós calculamos o seu IMC!</h2>
+				<img src="img/Formula-do-IMC.png">
+                <p>No próximo <i>slide</i> você terá acesso aos dados inseridos nas janelas <i>pop up</i>, pois já calculamos para você o seu IMC.</p>
+  			</section>
+
+  			<section>
+                <br>
+  				<h2> Resultado(s) do(s) seu(s) IMC(s): </h2>
+                <br>
+  				<script type="text/javascript">
+
+					imc = 0;
+					
+					for (i=0; i<=6; i++) {
+						nome = prompt ("Qual o seu nome?");
+						peso = prompt ("Qual o seu peso?");
+						altura = prompt ("Qual a sua altura?");
+						
+						imc = peso/(altura*altura);
+						
+						/*imc += imcParcial;*/
+                        
+                        document.write("<section>"+nome+",</br></br> Seu peso é: "+peso+"kg;</br> Sua altura é: "+altura+"m.</br> Portanto, seu IMC é: "+imc.toFixed(2)+"</br></br></section>");
+						
+					if (imc<18.49) {
+						document.write("<section>Você está abaixo do peso ideal.</section></br>");
+
+					}
+					else if ((imc>18.5) && (imc <= 24.9)) {
+						document.write("<section>Você está no peso ideal!</section></br>");
+					}
+					else if ((imc>25.0) && (imc <= 29.9)) {
+						document.write("<section>Você está levemente acima do peso ideal.</section></br>");
+					}
+					else if ((imc>30.0) && (imc <= 34.9)) {
+						document.write("<section>Você está com obesidade grau 1.</section></br>");
+					}
+					else if ((imc>35.0) && (imc <= 39.9)) {
+						document.write("<section>Você está com obesidade grau 2, severa.</section></br>");
+					}
+					else if (imc>=40.0) {
+						document.write("<section>Você está com obesidade grau 3, mórbida.</section></br>");
+					}
+					else {
+						document.write ("<section>Você não preencheu a altura e o peso, portanto seu IMC é desconhecido.</section></br>");
+						document.write ("");
+					}
+					
+                    }
+                </script>
+  			</section>
+
+  			<section>
+                <h2> Veja como seu corpo está: </h2>
+                <br>
+  				<img src="img/corpos.png"/>
+  			</section>
+            
+            <section>
+                <img src="img/aprendeu_ai.png"/>
+                <br>
+  			</section>
+            
+            <section>
+                <h2>Para lembrar...</h2>
+                <img src="img/class_imc.png"/>
+                <br>
+  			</section>
+            
+            <section>
+                <img src="img/ate_proxima.png"/>
+                <br>
+  			</section>
+            
+            <section>
+                <h1> Fim! </h1>
+                <br>
+  			</section>
+            
+  		</div> <!-- /slides -->
+        
+  	</div> <!-- /reveal -->
+
+  	<!-- Reveal.js slides functionality -->
+      <script src="revealjs/js/reveal.js"></script>
+      <script>
+      	Reveal.initialize();
+        Reveal.configure({ slideNumber: true });
+      </script>
+
+  </body>
+</html>
